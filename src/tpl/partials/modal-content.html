@@ -1,0 +1,52 @@
+<section class="modal-content">
+  <form class="modal-content__send" action="https://httpbin.org/post" method="post" id="modal__form">
+    <div class="modal-content__form">
+
+      <div class="modal-content__block">
+        <h2 class="modal-content__title">SEND US MESSAGE</h2>
+        <button class="modal-content__button" type="button" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-content__wrapper">
+        <label class="modal__label" for="modal__name">Full Name</label>
+        <input class="modal__placeholder modal__placeholder--padding" type="text" id="modal__name"
+          placeholder="Your Name" name="name" minlength="3">
+      </div>
+
+      <div class="modal-content__wrapper">
+        <label class="modal__label" for="modal__email">Email</label>
+        <input class="modal__placeholder modal__placeholder--padding modal-content__focus" id="modal__email"
+          type="email" placeholder="Your Email" name="email">
+      </div>
+
+      <div class="modal-content__wrapper">
+        <label class="modal__label" for="modal__message">Message</label>
+        <textarea class="modal__label modal__textarea modal__placeholder" id="modal__message" placeholder="Your Message"
+          name="text"></textarea>
+      </div>
+
+      <button class="modal__submit--button" type="submit" id="modal__submit" aria-label="submit" disabled
+        value="Send form">SUBMIT</button>
+    </div>
+
+  </form>
+
+  <template id="success">
+    <div class="modal-content__message modal-content__message--success">
+      <h2 class="visually__hidden">Message sent</h2>
+      <img src="assets/img/true.png" alt="Logo" width="128" height="128">
+      <p class="modal-content__text">Your message has been sent to us.</p>
+      <button type="button" class="modal-content__message--button" aria-label="Close">Close</button>
+    </div>
+  </template>
+
+  <template id="error">
+    <div class="modal-content__message modal-content__message--error">
+      <h2 class="visually__hidden">Message not delivered</h2>
+      <img src="assets/img/false.png" alt="Logo" width="128" height="128">
+      <p class="modal-content__text">A send error has occurred.</p>
+      <button type="button" class="modal-content__message--button" aria-label="Try again">Try again</button>
+    </div>
+  </template>
+
+</section>
